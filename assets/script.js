@@ -40,7 +40,7 @@ function removeActiveDots() {
 
 // Fonction pour gérer le carrousel
 function handleCarousel(slideDirection) {
-  // Mise à jour de l'index en fonction de la direction (1 pour le suivant, -1 pour le précédent)
+  // On met à jour l'index de la diapositive actuellement affichée en fonction de la direction (1 pour le suivant, -1 pour le précédent)
   currentSlideIndex += slideDirection;
 
   // Vérification si l'index dépasse les limites du carrousel
