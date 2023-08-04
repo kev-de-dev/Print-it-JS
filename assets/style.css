@@ -34,7 +34,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: flex;
 }
 body {
 	line-height: 1;
@@ -141,19 +141,25 @@ header {
 .slider img.active {
 	opacity: 1;
 }
-.slider .suivant,.precedent {
-	color: #fff;
+.slider .suivant,.precedent { /* proprietes des cheveron */
+	color: #ffffffb0;
+	
 	top: 50%;
-	font-size: 50px;
+	font-size: 55px;
 	position: absolute;
-	transform: translateY(-50%);
+	transform: translateY(-50%); /*centrer verticalement un élément */
 	cursor: pointer;
+	transition: opacity 0.2s ease;
 }
 .suivant  {
-	right: 95%;
+	right: 95%; /* centre horizontalement avec une marge de 5% */
 }
 .precedent  {
 	left: 95%;
+}
+.slider:hover.suivant, 
+.slider:hover .precedent{
+color: #fff;
 }
 /* Gestion des points du carrousel */
 .dots {
@@ -162,12 +168,12 @@ header {
 	display: flex;
 }
 .dot {
-	margin-inline: 5px;
+	margin-inline: 5px; /* espace interieur */
 	width: 13px;
 	height: 13px;
 	background-color: #ffffff00;
 	border: 3px solid #fff;
-	border-radius: 100%;
+	border-radius: 100%; /* circle dot */
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dot_selected {
